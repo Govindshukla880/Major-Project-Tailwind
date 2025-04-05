@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="font-poppins">
+    <!-- Navbar -->
+
+    <nav class="px-5 flex justify-between items-center bg-gray-200">
+      <!-- navlogo -->
+      <a href="#" class="flex gap-1 justify-center items-center p-2">
+        <img
+          src="./image/restaurant-svgrepo-com.svg"
+          alt="logo"
+          class="object-cover max-w-12 max-h-12" />
+        <span class="text-4xl font-medium text-black tracking-wide">Zomato</span>
+      </a>
+
+      <!-- nav-menu -->
+
+      <div id="nav-menu" class="hidden md:flex gap-12">
+        <a href="#" class="text-xl font-medium hover:text-primary">Home</a>
+        <a href="#About" class="text-xl font-medium hover:text-primary"
+          >About</a
+        >
+        <a href="#" class="text-xl font-medium hover:text-primary">Top Rated</a>
+        <a href="#Contact" class="text-xl font-medium hover:text-primary"
+          >Contact Us</a
+        >
+      </div>
+
+      <!-- Login -->
+      <a href="Login.html"
+        class="text-xl hidden md:block px-4 py-2 border rounded-lg bg-primary text-white cursor-pointer hover:border-transparent">
+        Login
+      </a>
+
+      <!-- Hamburger -->
+      <button
+        class="md:hidden px-2 font-medium text-2xl flex items-center justify-center"
+        onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-700"></i>
+      </button>
+
+      <div id="nav-section" class="md: hidden fixed inset-0 bg-gray-200 z-1000">
+        <div class="nav-bar flex justify-between px-7">
+          <a href="#" class="flex gap-1 items-center p-2">
+            <img
+              src="./image/restaurant-svgrepo-com.svg"
+              alt="logo"
+              class="object-cover max-w-12 max-h-12" />
+            <span class="text-4xl font-medium text-black">Zomato</span>
+          </a>
+
+          <button
+            class="md:hidden px-2 font-medium text-2xl flex items-center justify-center"
+            onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-700"></i>
+          </button>
+        </div>
+
+        <div class="flex flex-col items-center bg-white">
+          <a
+            href="#"
+            class="font-medium text-xl m-3 px-10 py-2 rounded-lg hover:text-primary hover:bg-gray-100 block"
+            >Home</a
+          >
+          <a
+            href="#About"
+            class="font-medium text-xl m-3 px-10 py-2 rounded-lg hover:text-primary hover:bg-gray-100 block"
+            >About</a
+          >
+          <a
+            href=""
+            class="font-medium text-xl m-3 px-10 py-2 rounded-lg hover:text-primary hover:bg-gray-100 block"
+            >Top Rated</a
+          >
+          <a
+            href="#Contact"
+            class="font-medium text-xl m-3 px-10 py-2 rounded-lg hover:text-primary hover:bg-gray-100 block"
+            >Contact Us</a
+          >
+          <a href="Login.html"
+            class="m-3 text-xl px-4 py-2 border rounded-lg bg-primary text-white cursor-pointer hover:border-gray-400 outline-none">
+            Log in
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About -->
+
+    <section id="About" class="px-4 py-5 md:px-16">
+      <h2
+        class="text-center text-2xl font-semibold md:text-3xl animate-pulse initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}">
+        About Us
+      </h2>
+
+      <div
+        class="mt-8 flex flex-col md:flex-row items-stretch bg-gray-200 rounded-3xl shadow-lg overflow-hidden">
+        <!-- Text Section -->
+        <div class="p-10 md:w-1/2 flex flex-col justify-center">
+          <h3
+            class="mb-4 text-xl font-bold md:text-2xl typing-effect text-blue-600 tracking-wide">
+            About Zomato Dataset....
+          </h3>
+          <p class="mt-4 text-gray-800 max-w-9/10">
+            In today's fast-paced world, choosing the right restaurant can be
+            overwhelming. With thousands of dining options available, how do you
+            know which one suits your taste and budget? Our Restaurant
+            Recommender System solves this problem by providing personalized
+            restaurant recommendations based on ratings, location, cuisine
+            preferences, and data-driven insights.
+          </p>
+          <p class="mt-4 text-gray-800 max-w-9/10">
+            Whether you're craving Italian, Indian, or Chinese cuisine, our
+            system helps you discover the best places to eat with just a few
+            clicks.
+          </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="md:w-1/2">
+          <img
+            src="./Image/About.jpg"
+            alt="Delicious food"
+            class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback -->
+
+    <section id="Contact" class="px-4 py-5 md:px-16">
+      <!-- Heading -->
+      <h2
+        class=" text-center text-2xl md:text-3xl font-semibold animate-pulse initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}">
+        Contact Us
+      </h2>
+
+      <!-- Internal Div -->
+      <div
+        class="mt-8 flex flex-col md:flex-row items-stretch bg-gray-200 rounded-3xl shadow-lg overflow-hidden">
+        <!-- Left-Section -->
+        <div class="md:w-1/2">
+          <img
+            src="./Image/Contact 2.jpg"
+            alt="Image"
+            class="w-full h-full object-cover" />
+        </div>
+        <!-- Right-Section -->
+        <div
+          class="m-2 px-10 md:w-1/2 flex flex-col justify-center items-center">
+          <!-- Heading -->
+          <h3 class="my-2text-xl font-poppins md:text-2xl tracking-wide">
+            Restaurant Feedback Form
+          </h3>
+
+          <!-- Form -->
+
+          <form id="contact-form"
+            action=""
+            class="my-3 rounded-2xl bg-white flex flex-col justify-center items-center w-9/10">
+            <input
+              type="text"
+              name="first_name"
+              placeholder="Enter your First name :"
+              required
+              class="border border-gray-200 rounded-xl px-5 py-[6px] mt-5 w-10/12 md:w-7/10 shadow-lg focus:ring-2 focus:ring-gray-300 focus:border-gray-300 focus:outline-none" />
+
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Enter your Last name :"
+              required
+              class="border border-gray-200 rounded-xl px-5 py-[6px] mt-5 w-10/12 md:w-7/10 shadow-lg focus:ring-2 focus:ring-gray-300 focus:border-gray-300 focus:outline-none" />
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number :"
+              required
+              class="border border-gray-200 rounded-xl px-5 py-[6px] mt-5 w-10/12 md:w-7/10 shadow-lg focus:ring-2 focus:ring-gray-300 focus:border-gray-300 focus:outline-none" />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email :"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+              class="border border-gray-200 rounded-xl px-5 py-[6px] mt-5 w-10/12 md:w-7/10 shadow-lg focus:ring-2 focus:ring-gray-300 focus:border-gray-300 focus:outline-none" />
+
+            <textarea
+              name="feedback"
+              rows="4"
+              placeholder="Enter your feedback here !"
+              class="border border-gray-200 rounded-xl px-5 py-[6px] mt-5 w-10/12 md:w-7/10 shadow-lg focus:ring-2 focus:ring-gray-300 focus:border-gray-300 focus:outline-none resize-none"></textarea>
+
+            <!-- Submit Button -->
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="my-5 w-full py-3 px-4 bg-blue-500 font-semibold text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Submit Feedback
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
