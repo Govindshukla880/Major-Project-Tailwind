@@ -16,7 +16,7 @@
   <body class="font-poppins">
     <!-- Navbar -->
 
-    <nav class="px-5 flex justify-between items-center bg-gray-200">
+    <nav class="px-5 flex justify-between items-center bg-gray-200 md:justify-around">
       <!-- navlogo -->
       <a href="#" class="flex gap-1 justify-center items-center p-2">
         <img
@@ -52,7 +52,7 @@
         <i class="fa-solid fa-bars text-gray-700"></i>
       </button>
 
-      <div id="nav-section" class="md: hidden fixed inset-0 bg-gray-200 z-1000">
+      <div id="nav-section" class="md: hidden fixed top-0 left-0 right-0 bg-gray-200 z-1000">
         <div class="nav-bar flex justify-between px-7">
           <a href="#" class="flex gap-1 items-center p-2">
             <img
@@ -97,6 +97,49 @@
         </div>
       </div>
     </nav>
+
+    <!-- Home -->
+
+    <div class="relative w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center" style="background-image: url('./Image/BG 4.jpg');">
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+
+      <!-- Internal Div -->
+
+      <div class="bg-gray-900 opacity-75 w-[85%] md:mx-16 md:h-7/10 rounded-2xl overflow-hidden flex flex-col justify-center items-center text-white z-100 md:flex-row">
+       
+        <!-- Left Section -->
+        <div class=" p-5 flex flex-col md:w-1/2 md:h-full md:flex md:flex-col md:justify-center">
+          <h1 class=" font-bold text-3xl md:text-5xl mb-2 text-red-500 py-2 text-wrap animate-slideDownFade">Restaurant recommender system</h1>
+          <h2 class="text-blue-600 font-semibold text-md">Based on Indore Location......</h2>
+          <p class="font-semibold text-[15px] my-5 text-shadow-white ">
+            Welcome to our Restaurant recommender system 🎉 Finding the perfect restaurant can be overwhelming, but we make it simple and effortless. Our AI-powered recommendation system helps you discover top-rated restaurants based on your location and favorite cuisines.
+          </p>
+          <button class="text-shadow-white bg-blue-500 hover:bg-blue-600 hover:shadow-blue-700 rounded-2xl px-5 py-2 mx-auto">Explore Now...</button>
+        </div>
+    
+        <!-- Right Section -->
+        <div class="z-100 py-4 px-15 flex flex-col justify-center w-full md:w-1/2 md:h-full">
+          <h2 class="mb-3 md:mb-7 text-center font-semibold text-3xl md:text-4xl">Find Your Best Restaurant</h2>
+          <div class="w-10 h-1 bg-green-400 mx-auto mb-2"></div>
+
+          <div class="flex flex-col justify-center px-15">
+          <label for="locality" class="text-shadow-white block mb-2 font-semibold">Locality :</label>
+          <input id="locality" type="text" class="focus:outline-none transition-all duration-300 ease-in-out border rounded-xl mb-2 px-3 py-2" placeholder="Enter Location here:">
+    
+          <label class="block mb-2 font-semibold text-shadow-white" for="cuisine">Cuisine :</label>
+          <input id="cuisine" type="text" class="focus:outline-none transition-all duration-300 ease-in-out border rounded-xl mb-2 px-3 py-2" placeholder="Enter your Cuisine:">
+          </div>
+
+          <button class="text-shadow-white cursor-pointer bg-blue-500 hover:bg-blue-600 hover:shadow-blue-700 rounded-2xl px-5 py-2 mx-auto my-3">Predict</button>
+    
+          <!-- Output will be displayed here -->
+          <div id="output" class="hidden flex justify-center items-center mt-3 text-white text-lg font-medium border rounded-xl mx-auto px-5 py-2"></div>
+
+        </div>
+
+      </div>
+    
+</div>
 
     <!-- About -->
 

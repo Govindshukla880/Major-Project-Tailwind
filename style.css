@@ -21,6 +21,22 @@
     animation: typing 2s steps(30) 1s infinite normal both;
     font-family: "Courier New", Courier, monospace;
 }
+
+@keyframes slideDownFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDownFade {
+    animation: slideDownFade 1.5s ease-out forwards;
+  }
+
 @keyframes typing {
     from {
         width: 0;
